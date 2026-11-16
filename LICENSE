@@ -1,0 +1,60 @@
+Tracking Smith SDK — Proprietary License
+
+Copyright (c) 2026 Ambos Development GmbH. All rights reserved.
+
+This software, including its compiled code, type declarations and
+documentation (the "Software"), is proprietary to Ambos Development GmbH
+("Licensor"). It is licensed, not sold.
+
+1. Grant of license
+   Subject to the terms below, Licensor grants you a limited, non-exclusive,
+   non-transferable, non-sublicensable, revocable right to install and use
+   the Software, solely
+   (a) while you, or the organisation you act for, have an active agreement
+       with Licensor for the Tracking Smith service (the "Customer
+       Agreement"), and
+   (b) to integrate your websites and applications with the Tracking Smith
+       service.
+   The Software may be included in your websites and applications and
+   delivered to their end users only as necessary for that purpose.
+
+2. Restrictions
+   Except as expressly permitted in section 1 or by mandatory law, you may
+   not:
+   (a) copy, modify, adapt, translate or create derivative works of the
+       Software;
+   (b) distribute, sell, rent, lease, sublicense or otherwise make the
+       Software available to third parties on a standalone basis;
+   (c) decompile, disassemble or reverse engineer the Software, except to
+       the extent such restriction is prohibited by applicable law
+       (in particular sec. 69d and 69e of the German Copyright Act, UrhG);
+   (d) use the Software with any service other than Tracking Smith, or to
+       build a competing product or service;
+   (e) remove or alter any copyright or proprietary notices.
+
+3. Ownership
+   Licensor and its licensors retain all right, title and interest in and to
+   the Software. All rights not expressly granted are reserved.
+
+4. Termination
+   This license ends automatically when the Customer Agreement ends or if
+   you breach this license. On termination you must stop using the Software
+   and remove it from your systems, websites and applications.
+
+5. No warranty; liability
+   Unless the Customer Agreement provides otherwise, the Software is provided
+   "as is" without warranty of any kind. Licensor's liability is governed by
+   the Customer Agreement; where none applies, Licensor is liable only for
+   intent and gross negligence, for injury to life, body or health, and
+   under mandatory statutory provisions (including the German Product
+   Liability Act).
+
+6. Customer Agreement; governing law
+   If this license conflicts with the Customer Agreement, the Customer
+   Agreement prevails. This license is governed by the laws of the Federal
+   Republic of Germany, excluding the UN Convention on Contracts for the
+   International Sale of Goods. Place of jurisdiction for merchants is
+   Hamburg, Germany.
+
+Contact: sales@ja-developer.de · https://ja-developer.de/imprint/
+Privacy policy: https://ja-developer.de/datenschutzerklaerung/
