@@ -139,7 +139,7 @@ minor versions may contain breaking changes; pin with `~0.1.0` (npm) or
 
 ## Support
 
-Found a bug or have a question? [Open an issue](https://github.com/host-smith/tracking-smith-js/issues).
+Found a bug or have a question? [Open an issue](https://github.com/ambos-venture-lab/tracking-smith-js/issues).
 This repository contains documentation and releases only — the SDK source is
 not public.
 
