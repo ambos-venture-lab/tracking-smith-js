@@ -1,0 +1,60 @@
+# Trivy vulnerability scan of this repository's dependencies.
+#
+# Self-contained copy of the shared setup in ambos-venture-lab/.github: public
+# repositories cannot call reusable workflows from a private repository. Keep
+# the pinned versions in sync with that repository.
+#
+# Actions are pinned to commit SHAs on purpose: in March 2026 attackers
+# force-pushed 76 of 77 trivy-action tags to credential-stealing code
+# (CVE-2026-33634). Report-only: findings go to the job summary, the job does
+# not fail.
+name: Trivy
+
+on:
+  push:
+    branches: [main, master, quality-assurance, development]
+  pull_request:
+  schedule:
+    - cron: '17 5 * * 1' # weekly, Monday 05:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  trivy-fs:
+    name: Trivy filesystem scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Run Trivy
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        with:
+          version: v0.76.2
+          scan-type: fs
+          scan-ref: .
+          scanners: vuln
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true
+          format: table
+          output: trivy-fs.txt
+          exit-code: '0'
+
+      - name: Add report to job summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '### Trivy filesystem scan (CRITICAL,HIGH, fixable only)'
+            if [ -s trivy-fs.txt ]; then
+              echo '```'
+              head -c 900000 trivy-fs.txt
+              echo '```'
+            else
+              echo 'No findings.'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
