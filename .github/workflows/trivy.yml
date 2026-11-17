@@ -1,0 +1,18 @@
+# Trivy vulnerability scan of this repository's dependencies.
+# Shared setup and pinned versions: https://github.com/ambos-venture-lab/.github
+name: Trivy
+
+on:
+  push:
+    branches: [main, master, quality-assurance, development]
+  pull_request:
+  schedule:
+    - cron: '17 5 * * 1' # weekly, Monday 05:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  trivy:
+    uses: ambos-venture-lab/.github/.github/workflows/trivy-fs.yml@main
